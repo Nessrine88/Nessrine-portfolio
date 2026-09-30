@@ -9,12 +9,12 @@ import Header from './_component/Header'
 
 export default function Home() {
   const showcaseImages = [
-    "/project1.png",
+    "/project-1.png",
     "/ecommerce.png",
-    "/project2.png",
-    "/company.png",
-    "/services.png",
-    "/client1.png",
+    "/project-2.png",
+    "/project-3.png",
+    "/project-4.png",
+    "/project-5.png",
   ]
 
   return (
@@ -33,13 +33,13 @@ export default function Home() {
           <div className='lg:col-span-6 z-10 space-y-4 sm:space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start'>
             {/* Mint Green Pill Badge */}
             <div className='inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-[#86efac] text-zinc-950 text-[11px] sm:text-xs font-bold tracking-wider uppercase shadow-sm'>
-              Portfolio Template
+              Software Developer
             </div>
 
             {/* Title Block */}
             <div className='space-y-1 sm:space-y-2'>
               <h1 className='text-4xl xs:text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tight text-zinc-950 leading-[0.95]'>
-                <AnimatedText text="PORTFOLIO" />
+                <AnimatedText text="HELLO, I'M NESSRINE" />
               </h1>
               <p className='text-xl sm:text-3xl md:text-5xl font-light text-zinc-500 tracking-tight'>
                 Photography & Code
