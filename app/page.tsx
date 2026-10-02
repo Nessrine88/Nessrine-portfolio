@@ -49,6 +49,27 @@ const projects = [
     github: 'https://eplatform.sjapathway.com/',
     live: 'https://eplatform.sjapathway.com/',
   },
+    {
+    image: '/project-6.png',
+    title: 'Project Six',
+    category: 'Web Apps',
+    github: 'https://services-app-five.vercel.app/',
+    live: 'https://services-app-five.vercel.app/',
+  },
+      {
+    image: '/project-7.png',
+    title: 'Project Seven',
+    category: 'Web Apps',
+    github: 'https://portfolio-2-pi-beige.vercel.app/',
+    live: 'https://portfolio-2-pi-beige.vercel.app/',
+  },
+      {
+    image: '/project-8.png',
+    title: 'Project Eight',
+    category: 'Web Apps',
+    github: 'https://portfolio-1-rho-ten.vercel.app/',
+    live: 'https://portfolio-1-rho-ten.vercel.app/',
+  },
 ]
 
 export default function Home() {
