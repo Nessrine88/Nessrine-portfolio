@@ -1,240 +1,83 @@
-import Image from 'next/image'
-import { ArrowUpRight } from 'lucide-react'
-import Imagetext from './_component/Imagetext'
-import MultipleImgs from './_component/MultipleImgs'
-import Footer from './_component/Footer'
-import AnimatedText from './_component/AnimatedText'
-import Header from './_component/Header'
-import { Metadata } from 'next'
+import Landscape from "@/components/Landscape";
+import { projects, services, skills } from "@/data/projects";
 
-const projects = [
-  {
-    image: '/project-1.png',
-    title: 'Periodic Table',
-    category: 'Web Apps',
-    github: 'https://github.com/Nessrine88/periodic-table',
-    live: 'https://periodic-table-theta-cyan.vercel.app/',
-  },
-  {
-    image: '/project1.png',
-    title: 'E-Commerce Website',
-    category: 'Web Apps',
-    github: 'https://github.com/Nessrine88/ecommerce-store',
-    live: 'https://ecommerce-store-puce-ten.vercel.app/en',
-  },
-  {
-    image: '/project-2.png',
-    title: 'Siher community',
-    category: 'UI/UX',
-    github: 'https://github.com/Nessrine88/siFrontend',
-    live: 'https://si-frontend-five.vercel.app/communityPage',
-  },
-  {
-    image: '/project-3.png',
-    title: 'Map.ca',
-    category: 'Web Apps',
-    github: 'https://map.ca/',
-    live: 'https://map.ca/',
-  },
-  {
-    image: '/project-4.png',
-    title: 'JPlatform',
-    category: 'UI/UX',
-    github: 'hhttps://jplatform.sjapathway.com/',
-    live: 'https://jplatform.sjapathway.com/',
-  },
-  {
-    image: '/project-5.png',
-    title: 'Eplatform',
-    category: 'Web Apps',
-    github: 'https://eplatform.sjapathway.com/',
-    live: 'https://eplatform.sjapathway.com/',
-  },
-    {
-    image: '/project-6.png',
-    title: 'Ibtikar Template',
-    category: 'Web Apps',
-    github: 'https://services-app-five.vercel.app/',
-    live: 'https://services-app-five.vercel.app/',
-  },
-      {
-    image: '/project-7.png',
-    title: 'Portfolio Template',
-    category: 'Web Apps',
-    github: 'https://portfolio-2-pi-beige.vercel.app/',
-    live: 'https://portfolio-2-pi-beige.vercel.app/',
-  },
-      {
-    image: '/project-8.png',
-    title: 'Portfolio Template',
-    category: 'Web Apps',
-    github: 'https://portfolio-1-rho-ten.vercel.app/',
-    live: 'https://portfolio-1-rho-ten.vercel.app/',
-  },
-]
-export const metadata:Metadata = {
-  title: "Nessrine Macherki | Full-Stack Web Developer & UI/UX Designer",
-  description: "Portfolio of Nessrine Macherki - Innovative Full-Stack Developer and UI/UX Designer specializing in Next.js, TypeScript, React, and Ruby on Rails.",
-};
+const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
 export default function Home() {
   return (
-    <div className='relative min-h-screen overflow-x-hidden bg-[#f8fafc] text-zinc-900 selection:bg-[#86efac] selection:text-zinc-950'>
-      {/* HEADER */}
-      <Header />
+    <>
+      <Landscape />
+      <nav>
+        <a href="#top" style={{ margin: 0 }}>Nessrine Macherki</a>
+        <span>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </span>
+      </nav>
+      <main>
+        <section id="top">
+          <h1>Hi, I&apos;m Nessrine.</h1>
+          <p className="lead">
+            Full-stack web developer and UI/UX designer. I build modern, responsive, user-friendly websites that
+            combine creative design with clean, functional code.
+          </p>
+          <div>
+            <a className="btn p" href="#work">Explore work</a>
+            <a className="btn" href="#contact">Get in touch</a>
+          </div>
+        </section>
 
-      {/* 1. HERO SECTION */}
-      <section className='relative flex w-full overflow-hidden px-4 pt-24 pb-16 sm:px-8 sm:pt-32 md:px-16'>
-        {/* Background image */}
-        <Image
-          src='/bg1.jpg'
-          alt=''
-          fill
-          priority
-          sizes='100vw'
-          aria-hidden='true'
-          className='pointer-events-none object-cover opacity-40'
-        />
+        <section id="about">
+          <h2>Building digital experiences with purpose</h2>
+          <div className="panel">
+            <p style={{ marginTop: 0 }}>
+              I&apos;m a software developer and web designer focused on modern, responsive, user-friendly digital
+              experiences. I pair thoughtful interface design with clean, scalable code to turn ideas into websites
+              and web applications that feel as good as they work.
+            </p>
+            <ul className="skills">{skills.map((s) => <li key={s}>{s}</li>)}</ul>
+          </div>
+        </section>
 
-        {/* Ambient glow */}
-        <div className='pointer-events-none absolute -top-40 h-72 w-72 rounded- sm:h-96 sm:w-96' />
+        <section id="services">
+          <h2>Tailored digital solutions</h2>
+          <div className="grid">
+            {services.map((s) => (
+              <div className="card" key={s.title}><h3>{s.title}</h3><p>{s.text}</p></div>
+            ))}
+          </div>
+          <p style={{ marginTop: "1.4rem" }}><a className="btn p" href="#contact">Start a project</a></p>
+        </section>
 
-        <div className='relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12'>
-          {/* Left hero content */}
-          <div className='relative z-10 lg:col-span-6'>
-            {/* Soft blurred green glow behind the panel */}
-            <div
-              aria-hidden='true'
-              className='pointer-events-none absolute -inset-4 -z-10 '
-            />
-
-            {/* Frosted green panel */}
-            <div className='flex flex-col items-center space-y-4 p-6 text-center  sm:space-y-6 sm:p-10 lg:items-start lg:text-left'>
-              {/* Badge */}
-              <div className='shadow-2xl shadow-blue-950 inline-flex items-center gap-2 rounded-full bg-zinc-950 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#86efac] sm:px-4 sm:text-xs'>
-                Software Developer
-              </div>
-
-              {/* Title */}
-              <div className='space-y-1 sm:space-y-2'>
-                <h1 className='text-4xl font-extrabold leading-[0.95] tracking-tight text-zinc-950 sm:text-7xl md:text-8xl'>
-                  <AnimatedText text="HI, I'M" />
-                  <br />
-                  <AnimatedText text='NESSRINE' />
-                </h1>
-
-                <p className='text-xl font-normal tracking-tight text-zinc-700 sm:text-3xl md:text-5xl'>
-                  Web Developer & Designer
+        <section id="work">
+          <h2>Featured projects</h2>
+          <div className="grid">
+            {projects.map((p) => (
+              <div className="card" key={p.title}>
+                <span className="kind">{p.kind}</span>
+                <h3>{p.title}</h3>
+                <p className="links">
+                  <a href={p.live} {...ext}>{p.github ? "Live demo" : "Live site"}</a>
+                  {p.github && <a href={p.github} {...ext}>GitHub</a>}
                 </p>
               </div>
-
-              {/* Description */}
-              <p className='max-w-lg text-sm font-medium leading-relaxed text-zinc-800 sm:text-base md:text-lg'>
-                I create modern, responsive and user-friendly websites,
-                combining creative design with clean and functional code.{' '}
-                <span className='font-bold text-zinc-950'>
-                  Nessrine Macherki.
-                </span>
-              </p>
-
-              {/* CTA */}
-              <div className='flex w-full flex-col items-center gap-3 pt-2 sm:w-auto sm:flex-row sm:gap-4'>
-                <a
-                  href='#work'
-                  className='inline-flex w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-6 py-3 text-xs font-semibold text-white shadow-sm transition hover:bg-zinc-800 active:scale-95 sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm'
-                >
-                  Explore Work
-                  <ArrowUpRight className='h-4 w-4 text-[#86efac]' />
-                </a>
-
-                <a
-                  href='#contact'
-                  className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-zinc-200 bg-white px-6 py-3 text-xs font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50 active:scale-95 sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm'
-                >
-                  Get in Touch
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
+        </section>
 
-          {/* Right hero: profile photo */}
-         
-        </div>
-      </section>
-
-      {/* 2. ABOUT */}
-      <section
-        id='about'
-        className='relative z-20 border-t border-zinc-200/60 bg-white px-4 py-16 sm:px-8 sm:py-24 md:px-16'
-      >
-        
-        <div className='mx-auto max-w-6xl z-50'>
-          <Imagetext
-            url='/designer2.jpeg'
-            title='Building Digital Experiences With Purpose'
-            description="I'm a software developer and web designer focused on creating modern, responsive, and user-friendly digital experiences. I combine thoughtful interface design with clean, scalable code to turn ideas into websites and web applications that feel as good as they work."
-            buttonText='More About Me'
-            buttonHref='#services'
-          />
-        </div>
-      </section>
-
-      {/* 3. SERVICES */}
-      <section
-        id='services'
-        className='relative z-20 border-t border-zinc-200/60 bg-zinc-50 px-4 py-16 sm:px-8 sm:py-24 md:px-16'
-      >
-   
-        <div className='mx-auto max-w-6xl space-y-8 sm:space-y-12'>
-          <div className='space-y-2 px-2 text-center sm:space-y-3'>
-            <span className='inline-block rounded-full bg-[#86efac]/30 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-800 sm:text-xs'>
-              Services & Expertise
-            </span>
-
-            <h2 className='text-2xl font-extrabold tracking-tight text-zinc-950 sm:text-3xl md:text-4xl'>
-              Tailored Digital Solutions
-            </h2>
-          </div>
-
-          <Imagetext
-            url='/designer.jpeg'
-            title='From Ideas to Interactive Experiences'
-            description='From responsive websites and modern web applications to intuitive UI/UX interfaces, I transform ideas into polished digital products using modern technologies, thoughtful design, and clean development practices.'
-            buttonText='Start a Project'
-            buttonHref='#contact'
-          />
-        </div>
-      </section>
-
-      {/* 4. FEATURED WORK */}
-      <section
-        id='work'
-        className='relative z-20 border-t border-zinc-200/60 bg-white px-4 py-16 sm:px-8 sm:py-24 md:px-16'
-      >
-   
-        <div className='mx-auto max-w-6xl space-y-8 sm:space-y-12'>
+        <section id="contact">
+          <h2>Let&apos;s work together</h2>
+          <p className="lead">Have a project in mind? Send me a message or give me a call.</p>
           <div>
-            <span className='mb-2 inline-block rounded-full bg-[#86efac]/30 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-800 sm:text-xs'>
-              Selected Work
-            </span>
-
-            <h2 className='text-2xl font-extrabold tracking-tight text-zinc-950 sm:text-3xl md:text-4xl'>
-              Featured Projects
-            </h2>
+            <a className="btn p" href="mailto:infofigue@gmail.com">infofigue@gmail.com</a>
+            <a className="btn" href="tel:+21655237698">+216 55 237 698</a>
+            <a className="btn" href="https://github.com/Nessrine88" {...ext}>GitHub</a>
           </div>
-
-          {/* Filters live inside MultipleImgs (client component) */}
-          <MultipleImgs projects={projects} />
-        </div>
-      </section>
-
-      {/* 5. FOOTER */}
-      <footer
-        id='contact'
-        className='relative z-20 border-t border-zinc-800 bg-zinc-950 text-white'
-      >
-        <Footer />
-      </footer>
-    </div>
-  )
+          <p style={{ color: "var(--mute)" }}>© {new Date().getFullYear()} Nessrine Macherki. All rights reserved.</p>
+        </section>
+      </main>
+    </>
+  );
 }
