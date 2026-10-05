@@ -22,13 +22,13 @@ const Footer = () => {
               className='text-zinc-400 hover:text-[#86efac] transition-colors flex items-center gap-3 text-sm sm:text-base'
             >
               <Phone className='w-4 h-4 text-[#86efac]' /> 
-              +1 (234) 567-890
+             +21655237698
             </a>
           </div>
         </div>
 
         {/* Social Media */}
-        <div className='space-y-4 flex flex-col items-center md:items-start'>
+        {/* <div className='space-y-4 flex flex-col items-center md:items-start'>
           <h2 className='text-lg font-semibold tracking-wide text-zinc-100'>Social Media</h2>
           <div className='flex items-center gap-4'>
             <a 
@@ -59,7 +59,7 @@ const Footer = () => {
               <Twitter className='w-5 h-5' />
             </a>
           </div>
-        </div>
+        </div> */}
 
       </div>
 
