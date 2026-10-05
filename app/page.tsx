@@ -167,15 +167,7 @@ export default function Home() {
         id='about'
         className='relative z-20 border-t border-zinc-200/60 bg-white px-4 py-16 sm:px-8 sm:py-24 md:px-16'
       >
-            <Image
-          src='/bubbles-bg.svg'
-          alt=''
-          fill
-          priority
-          sizes='100vw'
-          aria-hidden='true'
-          className='pointer-events-none -z-10 object-cover opacity-50'
-        />
+        
         <div className='mx-auto max-w-6xl z-50'>
           <Imagetext
             url='/designer2.jpeg'
@@ -192,15 +184,7 @@ export default function Home() {
         id='services'
         className='relative z-20 border-t border-zinc-200/60 bg-zinc-50 px-4 py-16 sm:px-8 sm:py-24 md:px-16'
       >
-      <Image
-        src='/profile-bg.svg'
-        alt=''
-        fill
-        priority
-        sizes='100vw'
-        aria-hidden='true'
-        className='-z-10 pointer-events-none -scale-y-100 object-cover opacity-40'
-      />
+   
         <div className='mx-auto max-w-6xl space-y-8 sm:space-y-12'>
           <div className='space-y-2 px-2 text-center sm:space-y-3'>
             <span className='inline-block rounded-full bg-[#86efac]/30 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-800 sm:text-xs'>
@@ -227,15 +211,7 @@ export default function Home() {
         id='work'
         className='relative z-20 border-t border-zinc-200/60 bg-white px-4 py-16 sm:px-8 sm:py-24 md:px-16'
       >
-     <Image
-        src='/bubbles-wavy-bg.svg'
-        alt=''
-        fill
-        priority
-        sizes='100vw'
-        aria-hidden='true'
-        className='pointer-events-none -z-10 -scale-y-100 object-cover opacity-40'
-      />
+   
         <div className='mx-auto max-w-6xl space-y-8 sm:space-y-12'>
           <div>
             <span className='mb-2 inline-block rounded-full bg-[#86efac]/30 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-800 sm:text-xs'>
