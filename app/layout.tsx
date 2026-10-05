@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
+// @ts-expect-error CSS files are handled by Next.js at build time.
 import "./globals.css";
 
 const font = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font" });
@@ -8,6 +9,9 @@ export const metadata: Metadata = {
   title: "Nessrine Macherki | Full-Stack Web Developer & UI/UX Designer",
   description:
     "Portfolio of Nessrine Macherki, full-stack developer and UI/UX designer working with Next.js, TypeScript, React and Ruby on Rails.",
+     icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
