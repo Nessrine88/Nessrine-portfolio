@@ -5,6 +5,7 @@ import MultipleImgs from './_component/MultipleImgs'
 import Footer from './_component/Footer'
 import AnimatedText from './_component/AnimatedText'
 import Header from './_component/Header'
+import { Metadata } from 'next'
 
 const projects = [
   {
@@ -71,6 +72,10 @@ const projects = [
     live: 'https://portfolio-1-rho-ten.vercel.app/',
   },
 ]
+export const metadata:Metadata = {
+  title: "Nessrine Macherki | Full-Stack Web Developer & UI/UX Designer",
+  description: "Portfolio of Nessrine Macherki - Innovative Full-Stack Developer and UI/UX Designer specializing in Next.js, TypeScript, React, and Ruby on Rails.",
+};
 
 export default function Home() {
   return (
@@ -82,7 +87,7 @@ export default function Home() {
       <section className='relative flex w-full overflow-hidden px-4 pt-24 pb-16 sm:px-8 sm:pt-32 md:px-16'>
         {/* Background image */}
         <Image
-          src='/profile-bg.svg'
+          src='/bg1.jpg'
           alt=''
           fill
           priority
@@ -153,16 +158,7 @@ export default function Home() {
           </div>
 
           {/* Right hero: profile photo */}
-          <div className='relative h-[360px] w-full sm:h-[380px] md:h-[460px] lg:col-span-6 lg:h-[540px]'>
-            <Image
-              src='/profile.png'
-              alt='Profile photo of Nessrine Macherki'
-              fill
-              priority
-              sizes='(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 50vw'
-              className='object-contain transition-transform duration-500 hover:scale-105'
-            />
-          </div>
+         
         </div>
       </section>
 
